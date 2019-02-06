@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="technical.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JavaScript Basics</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#variables">Variables</a></li>
+        <li><a class="nav-link" href="#arrays">Arrays</a></li>
+        <li><a class="nav-link" href="#objects">Objects</a></li>
+        <li><a class="nav-link" href="#functions">Functions</a></li>
+        <li><a class="nav-link" href="#conditional_statements">Conditional Statements</a></li>
+        <li><a class="nav-link" href="#loops">Loops</a></li>
+        <li><a class="nav-link" href="#conclusion">Conclusion</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <p>I have been studying Javascript using Jon Duckett's helpful book, <a id="book" href="http://www.javascriptbook.com/" target="_blank">Javascript & Jquery</a>, and have been taking notes as I go. This page is a collection of those notes for the first parts of the book. This list can be used as a quick reference for basic Javascript syntax, which includes rules and examples for six fundamental concepts.</p>
+        <p>Please peruse and use to amuse you(s).</p>
+      </section>
+      <section class="main-section" id="variables">
+        <header>Variables</header>
+        <h3>Overview</h3>
+        <p>Variables are like little boxes you can create in Javascript. You can then either immediately store a value in them or store one later.</p>
+        <p>When you create a variable, you can give it any name you like, with some rules listed below. This is called "Declaring a variable".</p>
+        <p>When you asign a value to the variable, it is called "Initializing a variable". You can assign it any value within three categories: String, Numeric, or Boolean.</p>
+        <p>You can access a variable at any time in a script by simply naming it. You can also update or change the variable's value at any time by naming it and assigning it a new value.</p>
+        <h3>1. Basic Rules</h3>
+  <p>-- Declaring & initializing variables --</p>
+        <p><li>String</li><code>var food = "fruit";</code>
+          <li>Numeric</li><code>var weight = 215;</code>
+          <li>Boolean</li><code>var godIsGood = true;</code></p>
+        <p>-- Alternate Syntax --</p>
+        <code>var food;<br>
+    food = fruit;<br>
+    var weight;<br>
+    weight = 215;<br>
+    var godIsGood;<br>
+      godIsGood = true;</code>
+        <p>-- Rules to naming variables --</p>
+        <p>
+          <ol>
+            <li>Must begin with a letter, $, or underscore (_)</li>
+            <li>Can contain letters, numbers, $, or _</li>
+            <li>Cannot use Keywords or Reserved words (like 'var', 'function', 'return', etc.)</li>
+            <li>Variables are case sensative (to call var bus, you must type 'bus', not 'Bus')</li>
+            <li>Descriptive names are prefered</li>
+            <li>Camel casing for multiple words (var 'iloverice' should be 'iLoveRice')</li>
+          </ol>
+        </p>
+        <h3>2. Other Rules</h3>
+        <p>-- Quotes within quotes on a string --</p>
+        <p>Alternate quote types, single or double, to include in string.</p>
+        <code>var love = "Haters shouldn't hate";<br>
+    var bookQuote = 'The man said, "Yikes!", then died';<br></code>
+        <p>Escape the quatation with '\' before each quote mark which tells interpreter that the following character is part of string.</p>
+        <code>var foodLover = "The food lover yelled \"I love salmon!\", before eating the donut";</code>
+      <p>-- Variables with operators --</p>
+      <code>var mathFun = 5 * 8; (mathFun returns 40)<br>var weight = 215;<br>var foodAmount = 5;<br>var happiness = weight + foodAmount; (happiness returns 220)</code>
+      <p>-- String concatenation --</p>
+      <code>var love = 'I love ';<br>var books = 'books';<br>var numbers = 'numbers';<br>var sentence = love + books + ' and ' + numbers + '!';<br>(sentence = "I love books and numbers!")</code>
+      </section>
+
+      <section class="main-section" id="arrays">
+        <header>Arrays</header>
+        <h3>Overview</h3>
+        <p>Arrays are like variables, except that they can hold multiple values. They are declared and initialized the same way, except that the values are stored inbetween two square brackets, [], with a comma between each value.</p>
+        <h3>1. Basic Rules</h3>
+        <p>-- Syntax --</p>
+        <p>Values within an array can be a combination of Strings, Numberics, or Booleans.</p>
+        <code>var food = ['apple','45','true'];</code>
+        <p>-- Accessing Arrays --</p>
+        <p>When accessing a variable's value, you simply name the variable. However, to access values within an array, you must name the array and include a particular value's index number between two square brackets. Arrays have a "zero index", which means the first value has an index of 0.</p>
+        <code>food[0]; (returns 'apple')<br>food[1]; (returns 45)</code>
+        <p>-- Updating Arrays --</p>
+        <p>You can update any value in an array by first accessing the value you need to change, and then assigning it a new value.</p>
+        <code>food[0] = 'plum'; ('plum' replaces 'apple' in the food array)</code>
+      </section>
+
+      <section class="main-section" id="objects">
+        <header>Objects</header>
+        <h3>Overview</h3>
+        <p>Objects are similar to arrays in that they store many values. However, with objects, each variable or "property" consists of a "key" and it's "value". You can even have a function within an object called a "method" (See Functions).</p>
+        <h3>1. Vocabulary</h3>
+        <li>Properties: Variables in an object</li>
+        <li>Key: Name of property</li>
+        <li>Value: Value of the Key</li>
+        <li>Methods: Functions in an object</li>
+        <h3>2. Object literal</h3>
+        <p>-- Structure --</p>
+        <p>In the example below, "name", "rooms", "booked", etc. are all examples of keys, while "Quay", "40", "25", etc. are the values for those keys. "roomTypes" is an example of an array within an object, while "checkAvailability" is a method.</p>
+        <code>var hotel = {<br><div class="indent">name: 'Quay',<br>rooms: 40,<br>booked: 25,<br>gym: true,<br>roomTypes: ['twin', 'double', 'suite'],<br>checkAvailability: function() {<br>return this.rooms - this.booked;<br>}<br></div>};</code>
+        <p>-- Accessing --</p>
+        <p>As with variables and arrays, there is a specific way to access data within an object. You can either use the dot method or the square bracket method.</p>
+        <li>Dot method</li>
+        <p>To access a value using the dot method, we us the structure "object-name.key". For example, if we wanted to access the value 'Quay' in the example above, we would type:</p>
+        <code>hotel.name;</code>
+        <p>This is the same for accessing a method, but you must remember to end the key with open and closing parantheses as you usually do when calling a function. For example, if we wanted to run the method above, we would type:</p>
+        <code>var roomsFree = hotel.checkAvailability();</code>
+        <li>Square bracket method</li>
+        <p>The square bracket method is very similar with slightly different syntax</p>
+        <code>hotel['name']; (returns 'Quay')</code>
+        <code>hotel['checkAvailability](); (runs the method)</code>
+        <p>-- Creating empty objects --</p>
+        <p>You can create empty objects before adding any properties.</p>
+        <code>var hotel = {}; (creates an empty object)<br>OR<br>var hotel = new Object();  (constructor notation)</code>
+        <p>-- Adding, Updating, and Deleting properties/methods to objects --</p>
+        <p>You can add, update, or remove properties/methods from an existing object.</p>
+        <li>ADD</li>
+        <code>hotel.name = 'Quay';<br>(If "name" Key does not exist, then it will be added to object)</code>
+        <li>UPDATE</li>
+        <code>hotel.name = 'Park';<br>(If Key already exists, this will update the value of key. In this case, will change 'Quay' to 'Park')</code>
+        <li>DELETE</li>
+        <code>delete hotel.name;<br>(Will delete 'name' key from object)</code>
+        <li>BLANK</li>
+        <code>hotel.name = '';<br>(Will either add 'name' key to object with blank value, or replace existing 'name' key with blank value)</code>
+        <h3>3. Constructor Functions</h3>
+        <p>Constructor Functions are a way to create an object template. You can use this function to create several objects that have the same keys.</p>
+        <p>-- Structure --</p><code>function Hotel(name, rooms, booked) {<div class="indent"><br>this.name = name;<br>this.rooms = rooms;<br>this.booked = booked;<br>this.checkAvailability = function() {<br><div class="indent">return this. rooms - this. booked;<br></div>};<br></div>}</code
+        <p>-- Creating multiple objects from constructor function --</p>
+        <code>var QuayHotel = new Hotel(Quay, 40, 25);<br>var ParkHotel = new Hotel(Park, 75, 30);<br>var PoopHotel = new Hotel(Poop, 2, 1);<br>etc.</code>
+        <p>The above code will create several differently named objects that all have the "name", "rooms", and "booked" keys with differing values.</p>
+        <h3>4. Arrays in an object</h3>
+        <p>It is possible to have arrays within objects.</p>
+        <p>-- Structure --</p>
+        <code>var hotel = {<br><div class="indent">room1:[420,40,10],<br>room2:[460,20,20],<br>room3:[230,0,0],<br></div>};</code>
+        <p>-- Accessing --</p>
+        <code>hotel.room1[0];<br>(returns 420)</code>
+        <h3>5. Objects in an array</h3>
+        <p>It is also possible to have objects within an array.</p>
+        <p>-- Structure --</p>
+        <code>var hotel = [<br><div class="indent">{accom: 420, food: 40, phone: 10},<br>{accom: 460, food: 20, phone: 20},<br>{accom: 230, food: 0, phone: 0}<br></div>];</code>
+        <p>-- Accessing --</p>
+        <code>hotel[2].phone  (returns 0)<br>hotel[0].accom  (returns 420)</code>
+      </section>
+
+      <section class="main-section" id="functions">
+        <header>Functions</header>
+        <h3>Overview</h3>
+        <p>Functions are a way to write a block of code once, then run it as many times as you like. Like a variable, all you need to do is name, or "call" the function, and the interpreter will run whatever code you put in it.</p>
+        <h3>1. Simple function</h3>
+        <p>Below is the syntax and calling process of a basic function.</p>
+        <p>-- Syntax --</p>
+        <code>function hello() {<br><div class="indent">document.write('hello');<br></div>}</code>
+        <p>-- Calling --</p>
+        <code>hello();  (Will write 'hello' to the document))</code>
+        <h3>2. Functions with 'parameters'</h3>
+        <p>You can add parameters between the two parenthesis of a function. When calling the function, you can send 'arguments' to those parameters. You can change these arguments everytime you call a function</p>
+        <p>--syntax--</p>
+        <code>function area(width, height) {<br><div class="indent">return width * height;<br></div>}</code>
+        <p>-- Sending arguments during function calling --</p>
+        <code>area(3,5);  (returns 15)</code>
+        <h3>3. Single value functions</h3>
+        <p>Most functions are interested in processing a single value</p>
+        <p>-- Syntax --</p>
+        <code>function area(width, height) {<br><div class="indent">var area = width * height;<br>return area;<br></div>}</code>
+        <p>-- Calling --</p>
+        <code>var area1 = area(3,5);   (returns 15)<br>var area2 = area(8,5);   (returns 40)</code>
+        <h3>4. Multiple value function</h3>
+        <p>However, some functions can process multiple values. It all depends on how you call it!</p>
+        <p>-- Syntax --</p>
+        <code>function getSize(width, height, depth) {<br><div class="indent">var area = width * height;<br>var volume = width * height * depth;<br>var sizes = [area, volume];<br>return sizes;<br></div>}</code>
+        <p>-- Calling --</p>
+        <code>var area1 = getSize(3,5,3)[0];   (returns 15)<br>var volume1 = getSize(3,5,3)[1];   (returns 45)<br>var sizes = getSize(3,5,3)[2];   (returns 15,45)</code>
+      </section>
+
+      <section class="main-section" id="conditional_statements">
+        <header>Conditional Statements</header>
+        <h3>Overview</h3>
+        <p>Sometimes you'll want a codeblock to run only if certain conditions are met. This is what conditional statements will do for you. You can use them to test conditions and run various blocks of code, depending on the outcome.</p>
+        <h3>1. Comparison Operators</h3>
+        <p>== equal to<br>=== strict equal to<br>!= not equal to<br>!== strict not equal to<br>> greater than<br>>= greater than or equal to<br>< less than<br><= less than or equal to</p>
+        <h3>2.  Condition structures</h3>
+        <p>-- Single comparison operator --</p>
+        <code>(score >= 50)   (This is the condition. 'score' and '50' are operands, and '>=' is the comparison operator)</code>
+        <p>-- Logical operators --</p>
+        <p>&&  Logical And<br>(Both expressions must be true to evaluate to true)<br>||  Logical Or<br>(At least one expression has to be true to evaluate to true)<br>!   Logical Not<br>(Inverts Boolean evaluation)</p>
+        <code>((5 > 2) && (6 > 3))   (evaluates to true)<br>((5 > 2) || (6 > 8))   (evaluates to true)<br>!(5 > 2)   (evaluates to false)</code>
+        <h3>3. if statements</h3>
+        <p>If statements will test if a condition is true, and, if so, codeblock between the brackets will run. If not, codeblock will be ignored.</p>
+        <p>-- Structure --</p>
+        <code>if (score >= 50) {<br><div class="indent">congratulate();<br></div>}</code>
+        <p>If score is greater or equal to 50, then the congratulate() function will run.</p>
+        <h3>4. if...else statements</h3>
+        <p>If...else statements will test if a condition is true, and, if so, codeblock between the "if" brackets will run. If not, codeblock between the "else" brackets will run.</p>
+        <p>-- Structure --</p>
+        <code>if (score >= 50) {<br><div class="indent">congratulations();<br></div>} else {<br><div class="indent">encourage();<br></div>}</code>
+        <p>If score is greater or equal to 50, then the congratulate() function will run. If not, then the encourage() function will run.</p>
+        <h3>5. switch statments</h3>
+        <p>Switch statments are another way of creating multiple "if" forks, with an "else", or in this case, a "default" backup, if none of the ifs are true.</p>
+        <p>-- Structure --</p>
+        <code>switch (level) {<br>
+          <div class="indent">case 'One':<br>
+            <div class="indent">title = 'Level 1';<br>break;</div><br>case 'Two':<br><div class="indent">title = 'Level 2';<br>break;</div><br>case 'Three':<br><div class="indent">title = 'Level 3';<br>break;</div><br>default:<br><div class="indent">title = 'Test';<br>break;</div>
+          </div><br>}</code>
+        <p>If switch value 'level' is any of the cases, that case's codeblock runs. Otherwise, default block runs.</p>
+      </section>
+      <section class="main-section" id="loops">
+        <header>Loops</header>
+        <h3>Overview</h3>
+        <p>Loops are a way to run a block of code over and over until a certain condition is met.</p>
+        <h3>1. for loop</h3>
+        <p>A for loop will cycle through its codeblock a set number of times until its set condition is false.</p>
+        <p>-- Structure --</p>
+        <code>for (var i = 0; i < 10; i++) {<br><div class="indent">document.write(i);<br></div>}</code>
+        <p>-- Breakdown of parts --</p>
+        <code>var i = 0   is the initialization<br>i < 10   is the condition<br>i++   is the update that happens at the end of each loop runthrough</code>
+        <h3>2. while loop</h3>
+        <p>While loops cycle through their codeblocks while a condition is true, usually an unknown amount of times.</p>
+        <p>-- Structure --</p>
+        <code>while (i < 10) {<br><div class="indent">msg += i + ' x 5 = ' + (i * 5) + '&lt;br&gt;';<br>i++;<br></div>}</code>
+        <p>While "i" is less than 10, the message will print out i x 5 = (i X 5), add a page break, add 1 to i, then do it all agian. This loop will print out a times 5 table until i = 10.</p>
+        <h3>3. do while loop</h3>
+        <p>Do while loops run at least once, even if while condition is false.</p>
+        <p>-- Structure --</p>
+        <code>do {<br><div class="indent">msg += i + ' x 5 = ' + (i * 5) + '&lt;br&gt;';<br>i++;<br></div>} while (i < 1);</code>
+      </section>
+      <section class="main-section" id="conclusion">
+        <header>Conclusion</header>
+        <p>So, you should learn JavaScript. It's really neat, and powerful enough to make video games.</p>
+      </section>
+    </main>
+  </body>
+</html>
