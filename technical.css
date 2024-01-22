@@ -44,6 +44,22 @@ li > a:hover {
   text-shadow: 1px 2px white;
 }
 
+li.js-login {
+    background: lightblue;
+    font-weight: 600; 
+}
+
+li.js-login > a {
+    text-decoration: underline;
+    font-size: 24px;
+    color: white;
+}
+
+li.js-login > a:hover {
+    color: black !important;
+    text-shadow: none;
+}
+
 /*Main section styles*/
 main {
   padding: 0 20px;
