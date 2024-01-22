@@ -4,12 +4,13 @@
     <link rel="stylesheet" type="text/css" href="technical.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   </head>
-  <body>
+  <body class="arete-touchstone">
     <nav id="navbar">
-      <header>JavaScript Basics</header>
+      <header>Arete - JavaScript Review and Challenges</header>
       <ul>
+        <li>Log into <a href="https://runjs.co/" target="_blank">runjs.co</a> to review and practice.</li>
         <li><a class="nav-link" href="#introduction">Introduction</a></li>
-        <li><a class="nav-link" href="#variables">Variables</a></li>
+        <li><a class="nav-link" href="#variables">1/23/2024 - - JS Variable Basics</a></li>
         <li><a class="nav-link" href="#arrays">Arrays</a></li>
         <li><a class="nav-link" href="#objects">Objects</a></li>
         <li><a class="nav-link" href="#functions">Functions</a></li>
@@ -22,53 +23,88 @@
     <main id="main-doc">
       <section class="main-section" id="introduction">
         <header>Introduction</header>
-        <p>I have been studying Javascript using Jon Duckett's helpful book, <a id="book" href="http://www.javascriptbook.com/" target="_blank">Javascript & Jquery</a>, and have been taking notes as I go. This page is a collection of those notes for the first parts of the book. This list can be used as a quick reference for basic Javascript syntax, which includes rules and examples for six fundamental concepts.</p>
-        <p>Please peruse and use to amuse you(s).</p>
+        <p>Hey Arete Students! This web page will serve as a touchstone for all of us to reference and review what we've learned. It will even provide some fun challenges for you to practice some some JavaScript concepts. Rather than sending home worksheets, this will be our new format moving forward. Below you will see our weekly lessons start to accumulate. I have provided some on-page navigation to the left so you can quickly get to the section you wish to review. Happy Coding! </p>
       </section>
+
       <section class="main-section" id="variables">
         <header>Variables</header>
         <h3>Overview</h3>
-        <p>Variables are like little boxes you can create in Javascript. You can then either immediately store a value in them or store one later.</p>
-        <p>When you create a variable, you can give it any name you like, with some rules listed below. This is called "Declaring a variable".</p>
-        <p>When you asign a value to the variable, it is called "Initializing a variable". You can assign it any value within three categories: String, Numeric, or Boolean.</p>
-        <p>You can access a variable at any time in a script by simply naming it. You can also update or change the variable's value at any time by naming it and assigning it a new value.</p>
-        <h3>1. Basic Rules</h3>
-  <p>-- Declaring & initializing variables --</p>
-        <p><li>String</li><code>var food = "fruit";</code>
-          <li>Numeric</li><code>var weight = 215;</code>
-          <li>Boolean</li><code>var godIsGood = true;</code></p>
-        <p>-- Alternate Syntax --</p>
-        <code>var food;<br>
-    food = fruit;<br>
-    var weight;<br>
-    weight = 215;<br>
-    var godIsGood;<br>
-      godIsGood = true;</code>
-        <p>-- Rules to naming variables --</p>
-        <p>
-          <ol>
-            <li>Must begin with a letter, $, or underscore (_)</li>
-            <li>Can contain letters, numbers, $, or _</li>
-            <li>Cannot use Keywords or Reserved words (like 'var', 'function', 'return', etc.)</li>
-            <li>Variables are case sensative (to call var bus, you must type 'bus', not 'Bus')</li>
-            <li>Descriptive names are prefered</li>
-            <li>Camel casing for multiple words (var 'iloverice' should be 'iLoveRice')</li>
-          </ol>
-        </p>
-        <h3>2. Other Rules</h3>
-        <p>-- Quotes within quotes on a string --</p>
-        <p>Alternate quote types, single or double, to include in string.</p>
-        <code>var love = "Haters shouldn't hate";<br>
-    var bookQuote = 'The man said, "Yikes!", then died';<br></code>
-        <p>Escape the quatation with '\' before each quote mark which tells interpreter that the following character is part of string.</p>
-        <code>var foodLover = "The food lover yelled \"I love salmon!\", before eating the donut";</code>
-      <p>-- Variables with operators --</p>
-      <code>var mathFun = 5 * 8; (mathFun returns 40)<br>var weight = 215;<br>var foodAmount = 5;<br>var happiness = weight + foodAmount; (happiness returns 220)</code>
-      <p>-- String concatenation --</p>
-      <code>var love = 'I love ';<br>var books = 'books';<br>var numbers = 'numbers';<br>var sentence = love + books + ' and ' + numbers + '!';<br>(sentence = "I love books and numbers!")</code>
+        <p>What is a Variable? A Variable is a container for storing data.</p>
+
+        <h3>1. Declaring a variable</h3>
+  <p>To use a variable, you must first “declare” it. For our class, we will be using the most common way of declaring a variable, namely using “var”. Here's an example of a variable being declared</p>
+        <p><code>var fishName = “Wanda”</code></p>
+        
+        <p>You can then reference that variable:</p>
+        <p><code>console.log(“My fish's name is” + fishName);</code></p>
+
+        <p>The above code will output “My fish's name is Wanda”.</p>
+        <p>You may also assign a different value to an existing variable.</p>
+        <p><code>var fishName = “Wanda”;</code></p>
+        <p><code>fishName = “Freddy”;</code></p>
+        <p><code>console.log(“My fish's name is” + fishName);</code></p>
+
+        <p>The above code will output “My fish's name is Freddy.</p>
+
+        <h3>2. Naming a variable</h3>
+        <p>Make sure to make your variable names descriptive, so that human readers (like you later on) can understand your code better.</p>
+        <span style="color:green;">GOOD</span>
+        <p><code>var freezingTempurature = 32;</code></p>
+
+        <span style="color:red;">BAD</span>
+        <p><code>var t = 32;</code></p>
+
+        <p>The most common variable naming format is called “camel case”. The variable name starts in lower case, then any added word has its first letter capitalized. This creates a "humped" effect...like a camel!</p>
+        <p><code>var thisVariableIsNamedUsingCamelCase = true;</code></p>
+
+        <h3>3. Data types and structures that can be stored in a variable</h3>
+
+        <h4>Strings</h4>
+        <p>A string value is anything with quotes around it. Even a number with quotes around it is technically a string</p>
+        <p><code>var myComputerTalks = “Hello World”;</code></p>
+        <p><code>var shout = “AHHHHH!”;</code></p>
+        <p><code>var excuse = “My dog ate my homework.”;</code></p>
+        <p><code>var notReallyNumber = “8”;</code></p>
+        <p><code>var iAmEightySeven = “8” + "7";</code></p>
+
+        <h4>Numbers</h4>
+        <p>A number value is, well, any number. Some coding languages require you to specify what kind of number you are declaring, like a whole number, or one with a decimal, or a negative number. JavaScript doesn't require you to be that specific. You just use any number for your value (without quotes), and JS will know it's a number.</p>
+        <p><code>var favoriteNumber = 13;</code></p>
+        <p><code>var holyDecimal = 7.77;</code></p>
+        <p><code>var negativeNancy = -13;</code></p>
+        <p><code>var four = 2 + 2;</code></p>
+
+        <h4>Boolean</h4>
+        <p>A boolean value is either true or false (again without quotes)</p>
+        <p><code>var godIsGood = true;</code></p>
+        <p><code>var iAmPerfect = false;</code></p>
+
+        <h4>Array</h4>
+        <p>An array is a data structure that is a set of values. This set is surrounded by square brackets “[]” and each item is separated by a comma. These can be a mix of data types, if needed.</p>
+        <p><code>var superHeroStrings =[“Batman”, “Spider-Man”, “Dogman”, “Person-Man”];</code></p>
+        <p><code>var luckyNumbers = [7, 13, 21, 88, 34];</code></p>
+        <p><code>var mixedDataTypeArray = [“A string”, 4, true, “I'm the last item!”];</code></p>
+
+        <h4>Object</h4>
+        <p>An object is another data structure that consists of what are called “key” and “value” pairs. This structure is surrounded by curly brackets “{}” and, again, each item pair is separated by a comma. Again, these items can be a mix of data types, if needed.</p>
+        <p><code>var myDog ={<br>
+            name: “Lola”,<br>
+            age: 2,<br>
+            lovesBath: false,<br>
+            favoriteWord: “Bark”<br>
+            };
+            </code></p>
+
+            <h3>4. Weekly Challenges</h3>
+            <ol>
+                <li>Declare a string variable for your favorite food. Give it any name you like. Try console logging it. Now add another string to the console log, so the console logs a full sentence. You can even create a new string variable that handles the rest of the sentence.</li>
+                <li>Create a few number variables. Try adding them together in a console log. Example <code>console.log(firstVariable + secondVariable)</code></li>
+                <li>Build an array that consists of your classmates. Console log the array. If your syntax is wrong, you'll get an error.</li>
+                <li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
+            </ol>
       </section>
 
-      <section class="main-section" id="arrays">
+      <!-- <section class="main-section" id="arrays">
         <header>Arrays</header>
         <h3>Overview</h3>
         <p>Arrays are like variables, except that they can hold multiple values. They are declared and initialized the same way, except that the values are stored inbetween two square brackets, [], with a comma between each value.</p>
@@ -225,7 +261,7 @@
       <section class="main-section" id="conclusion">
         <header>Conclusion</header>
         <p>So, you should learn JavaScript. It's really neat, and powerful enough to make video games.</p>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>
