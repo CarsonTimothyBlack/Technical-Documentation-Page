@@ -12,6 +12,7 @@
         <li><a class="nav-link" href="#introduction">Introduction</a></li>
         <li><a class="nav-link" href="#variables">1/23/2024 - - JS Variable Basics</a></li>
 		<li><a class="nav-link" href="#variables2">1/30/2024 - - JS Variable Methods and Operators</a></li>
+		<li><a class="nav-link" href="#arrays">2/6/2024 - - JS Arrays</a></li>
       </ul>
     </nav>
 
@@ -220,7 +221,127 @@
             </ol>
       </section>
 	  <!-- End week of 1/30/24 -->
-      
+
+	  <!-- <section class="main-section" id="arrays">
+        <header>2/6/2024 - - JS Arrays</header>
+        <h3>Overview</h3>
+        <p>What is an Array? An array is a special variable, which can hold more than one value.</p>
+
+		<h3>1. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>var arrayName = [item1, item2, item3, …];</code></p>
+
+		<h3>2. When to use an array</h3>
+		<p>Arrays are a great way to structure your data. For instance, you could create 3 different food variables:</p>
+		<p><code>var food1 = “banana”;</code></p>
+		<p><code>var food2 = ham;</code></p>
+		<p><code>var food3 = taco;</code></p>
+
+		<p>And that would be fine, and work in JS. However, when you start to see similar data items, it may make more sense to group them into an array. Plus, there are some array-specific methods, or built in JS functions, that you couldn’t run on a single string value. In the example above, it may be more elegant in your code to have one food variable, with different items. Namely, a food array!</p>
+		<p><code>var foods = [“banana”, “ham”, “taco”];</code></p>
+
+		<h3>3. Accessing array items</h3>
+		<p>To access a value for a single item variable, like a String, Number, or Boolean, you simply reference the variable name:</p>
+		<p><code>var tinyString = “small”;</code></p>
+		<p><code>var sentenceStart = “Bugs are “;</code></p>
+		<p><code>console.log(sentenceStart + tinyString);</code></p>
+
+		<p>In the above example, we simply typed the variable names, in this case adding them together, to access their values.</p>
+		<p>With arrays, we would reference the array name, but also specify the index within the array for the value we wish to access. Array indexes start with 0, meaning the first item is at index 0, while the last item is at an index that equals the length of the array minus 1. Let me illustrate:
+		</p>
+
+		<p><code>var kickArray = [“roundhouse”, “karate”, “scissor”, “punch?”];</code></p>
+		<p><code>console.log(kickArray[0]); // Outputs “roundhouse”</code></p>
+		<p><code>console.log(kickArrray.length); // Outputs 4</code></p>
+		<p><code>console.log(kickArray[kickArray.length - 1]); // Outputs “punch?”</code></p>
+
+		<p>The kickArray length is 4, since there are 4 items. But, since the index starts at 0, the last item, in this case, would be at index 3, or kickArray.length (which equals 4) - 1.</p>
+		<p>Just like with single value variables, you can change the value of an array item:</p>
+
+		<p><code>var oneOfTheseIsOdd = [“Apple”, “Orange”, “Pajamas”, “Mango”, “Peach”];</code></p>
+		<p><code>console.log(oneOfTheseIsOdd[2]); // Outputs “Pajamas”</code></p>
+		<p><code>oneOfTheseIsOdd[2] = “Pear”;</code></p>
+		<p><code>console.log(oneOfTheseIsOdd[2]); // Now outputs “Pear”</code></p>
+		
+		
+		<h3>4. Array methods</h3>
+		<p>There are several methods you can run on an array. One might even say that there are an array of array methods. Well, maybe just I would say that. Anyway, I'm only going to list the most commonly used ones below. But feel free to research more on W3schools.</p>
+		
+		<strong><em>Array</em>.length</strong>
+		<p>We've seen this one before! This tells you how many items are in the array.</p>
+		<p><code>var howLongAmI = [1, “test”, true, “confusing”, 88];</code></p>
+		<p><code>console.log(howLongAmI.length); // Outputs 5</code></p>
+
+		<strong><em>Array</em>.toString()</strong>
+		<p>This method turns your array into one big string:</p>
+		<p><code>var iWantToBeAString = [“I”, “have”, 3, “kids”];</code></p>
+		<p><code>console.log(iWantToBeAString.toString); // “I, have, 3, kids”</code></p>
+
+		<strong><em>Array</em>.join()</strong>
+		<p>This method turns your array into one big string, with each item separated by the character you provide in the parentheses:</p>
+		<p><code>var iWantToBeAString = [“I”, “have”, 3, “kids”];</code></p>
+		<p><code>console.log(iWantToBeAString.join(“ “)); // “I have 3 kids”</code></p>
+		<p><code>console.log(iWantToBeAString.join(“*“)); // “I*have*3*kids”</code></p>
+		<p><code>console.log(iWantToBeAString.join(“shm“)); // “Ishmhaveshm3shmkids”</code></p>
+
+		<strong><em>Array</em>.push()</strong>
+		<p>This is the most common method to add an item to an array. It adds the specified item to the end of the array:</p>
+		<p><code>var iAmMissingSomething = [“I”, “have”, 3];</code></p>
+		<p><code>iAmMissingSomething.push(“baboons”);</code></p>
+		<p><code>console.log(iAmMissingSomething.join(“ “)); // “I have 3 baboons”</code></p>
+
+            <h3>5. Weekly Challenges</h3>
+            <ol>
+                <li>Create an array of your favorite foods. Console log the 3rd item in your array. Remember that arrays start at index 0.</li>
+                <li>Turn your array into a single string, where each item is separated by a "?".</li>
+				<li>Add a new food to the end of your arrary.</li>
+				<li>Other Array methods. See, and describe what happens when you...
+					<ul>
+						<li>Run reverse() on your array.</li>
+						<li>Run sort() on your array.</li>
+						<li>Run indexOf() on your array. Put one of your array items in the parentheses. Example:
+							<p><code>var imAnArray = ["fun", "sun", "pun", "done"];</code></p>
+							<p><code>console.log(imAnArray.indexOf("pun"));</code></p>
+						</li>
+					</ul>
+				</li>
+            </ol>
+      </section> -->
+	  	  <!-- End week of 2/6/24 -->
+
+		<!-- <section class="main-section" id="arrays">
+		<header>2/6/2024 - - JS Arrays</header>
+		<h3>Overview</h3>
+		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
+
+		<h3>1. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>var arrayName = [item1, item2, item3, …];</code></p>
+
+		<h3>2. When to use an array</h3>
+		<p>Arrays are a great way to structure your data. For instance, you could create 3 different food variables:</p>
+		<p><code>XXXXX</code></p>
+		<p><code>XXXXX</code></p>
+		<p><code>XXXXX</code></p>
+
+		<h3>3. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>XXXXX</code></p>
+
+		<h3>4. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>XXXXX</code></p>
+
+			<h3>4. Weekly Challenges</h3>
+			<ol>
+				<li>Declare a string variable for your favorite food. Give it any name you like. Try console logging it. Now add another string to the console log, so the console logs a full sentence. You can even create a new string variable that handles the rest of the sentence.</li>
+				<li>Create a few number variables. Try adding them together in a console log. Example <code>console.log(firstVariable + secondVariable)</code></li>
+				<li>Build an array that consists of your classmates. Console log the array. If your syntax is wrong, you'll get an error.</li>
+				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
+			</ol>
+		</section> -->
+	<!-- End week of 2/13/24 -->
+
     </main>
   </body>
 </html>
