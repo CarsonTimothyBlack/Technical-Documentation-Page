@@ -14,7 +14,8 @@
 		<li><a class="nav-link" href="#variables2">1/30/2024 - - JS Variable Methods and Operators</a></li>
 		<li><a class="nav-link" href="#arrays">2/6/2024 - - JS Arrays</a></li>
 		<li><a class="nav-link" href="#objects">2/13/2024 - - JS Objects</a></li>
-        <!-- <li><a class="nav-link" href="#functions">2/27/2024 - - JS Functions</a></li> -->
+        <li><a class="nav-link" href="#functions">2/27/2024 - - JS Functions</a></li>
+		<!-- <li><a class="nav-link" href="#conditionals">3/5/2024 - - JS Conditionals</a></li> -->
       </ul>
     </nav>
 
@@ -384,7 +385,7 @@
 		</section>
 	<!-- End week of 2/13/24 -->
 
-			<!-- <section class="main-section" id="functions">
+		<section class="main-section" id="functions">
 		<header>2/27/2024 - - JS Functions</header>
 		<h3>Overview</h3>
 		<p>What is a Function? A function is a block of code designed to perform a particular task.</p>
@@ -443,12 +444,78 @@
 				<li>Return a user's name, age, and preferred coding language.</li>
 				<li>Returns what year it will be, 3 years from the current year..</li>
 			</ol>
-		</section> -->
+		</section>
 	<!-- End week of 2/27/24 -->
 
 
-			<!-- <section class="main-section" id="arrays">
-		<header>2/6/2024 - - JS Arrays</header>
+   <!-- <section class="main-section" id="conditionals">
+		<header>3/5/2024 - - JS Conditionals</header>
+		<h3>Overview</h3>
+		<p>What is a Conditional? A conditional is a block of code that only runs, if a condition is meant.</p>
+
+		<h3>1. Conditional Syntax</h3>
+		<p>To create a conditionall, use the following syntax:</p>
+		<p><code>if (<em>condition to meet</em>) {<br>
+			&nbsp;<em>code to run, if condition is met</em><br>
+		  }
+		  </code></p>
+		  <br>
+		  <p>Here's an example of a real conditional:</p>
+		  <p><code>if (5 < 6) {<br>
+			  &nbsp;console.log("Yep! 5 is less than 6.");<br>
+			}
+			</code></p>
+
+		<h3>2. if..else and else if</h3>
+		<p>If your initial condition is not met, run a different block of code with "else":</p>
+		<p><code>var myMathScore = 90;<br>
+			if (myMathScore > 80) {<br>
+				&nbsp;console.log(“I got an A!”);<br>
+			} else {<br>
+				&nbsp;console.log(“I got kicked out of school!”);<br>
+			}
+			</code></p>
+			<br>
+
+			<p>If you want to check against several conditions, use "else if":</p>
+		<p><code>var myMathScore = 75;<br>
+			if (myMathScore > 80) {<br>
+				&nbsp;console.log(“I got an A!”);<br>
+			} else if (myMathScore > 70) {<br>
+				&nbsp;console.log(“I got a B!”);<br>
+			} else if (myMathScore > 60) {<br>
+				&nbsp;console.log("I got a C...");<br>
+			} else if (myMathScore > 50) {<br>
+				&nbsp;console.log("I got a D...");<br>
+			} else if (myMathScore > 40) {<br>
+				&nbsp;console.log("I'm not doing so well...");<br>
+			} else {<br>
+				&nbsp;console.log("They kicked me out of school!");<br>
+			}</code></p>
+
+		<h3>3. AND(&&)…OR(||)</h3>
+		<p>If you want to check against multiple conditionals before a single block of code runs, you can use AND/OR syntax.</p>
+<br>
+<p>AND is used when every condition must be true to run a block of code:</p>
+		<p><code>if (5 > 6 && 11 > 2 && 7 == 7) {<br>
+			&nbsp;console.log(“Hooray! We can trust math!”);<br>
+		}</code></p>
+		<br>
+		<p>OR is used if at least one condition is true:</p>
+		<p><code>if (5 > 6 || 11 > 55 || 7 == 2) {<br>
+			&nbsp;console.log(“...Some of that math is wrong. But...ok!”);<br>
+		}</code></p>
+
+			<h3>4. Weekly Challenges</h3>
+			<ol>
+				<li>Create a function that takes a person's name and age, and outputs different pieces of code, depending on the age given. For example, if function is called "howOldAmI", then running howOlldAmI("Burt", 5) might return "Burt is pretty young!"</li>
+			</ol>
+		</section> -->
+	<!-- End week of 3/5/24 -->
+
+
+	<!-- <section class="main-section" id="loops">
+		<header>3/12/2024 - - JS Loops</header>
 		<h3>Overview</h3>
 		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
 
@@ -478,7 +545,9 @@
 				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
 			</ol>
 		</section> -->
-	<!-- End week of 3/5/24 -->
+	<!-- End week of 3/12/24 -->
+
+
     </main>
   </body>
 </html>
