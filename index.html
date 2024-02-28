@@ -16,6 +16,7 @@
 		<li><a class="nav-link" href="#objects">2/13/2024 - - JS Objects</a></li>
         <li><a class="nav-link" href="#functions">2/27/2024 - - JS Functions</a></li>
 		<!-- <li><a class="nav-link" href="#conditionals">3/5/2024 - - JS Conditionals</a></li> -->
+		<!-- <li><a class="nav-link" href="#loops">3/12/2024 - - JS Loops</a></li> -->
       </ul>
     </nav>
 
@@ -515,6 +516,63 @@
 
 
 	<!-- <section class="main-section" id="loops">
+		<header>3/12/2024 - - JS Loops</header>
+		<h3>Overview</h3>
+		<p>What is a Loop? A loop is a way to run the same code over and over again, with a different value.</p>
+
+		<h3>1. "for" Loop Syntax</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>for(var i = 0; i < 100; i++) {<br>
+			&nbsp;console.log(i);<br>
+		  }
+		  </code></p>
+		  <br>
+		  <p>The above loop will log the numbers 0 - 99 in the console.</p>
+		  <p>Let's break down the parameters that lie within the parentheses:</p>
+		  <ol>
+			<li>Create a counting variable and set its beginning value; var i = 0. This can be called anything, but usually it's “i”, since it often refers to the index of a particular set of values you are iterating over.</li>
+			<li>Set the condition “i” must meet, in order to run the code block; i < 100. This translates in English to, “if the variable “i” is less than 100, run the loop code block again. The “i” variable will change each time the loop runs, and thus get tested against this condition before running each loop. It changes because of…</li>
+			<li>Increase or decrease the count variable each time the loop runs; i++. i++ means that, everytime the loop runs, i will increase by 1.</li>
+		  </ol>
+
+		<h3>2. Loop Examples</h3>
+		<p>This loop will output 0 - 98 in console, counting by 2s, ie. 0, 2, 4, 6, etc.</p>
+		<p><code>for (var i = 0; i < 100; i + 2) {<br>
+			&nbsp;console.log(i);<br>
+		  }</code></p>
+		  <br>
+		  <p>This loop will output 100 - 1, counting backwards</p>
+		<p><code>for (var i = 100; i > 0; i--) {<br>
+			&nbsp;console.log(i);<br>
+		  }</code></p>
+		  <br>
+		  <p>This loop only outputs numbers that are divisible by 3</p>
+		<p><code>for (var i = 0; i < 100; i++) {<br>
+			&nbsp;if (i % 3 == 0) {<br>
+				&nbsp;&nbsp;console.log(i + “ is divisible by 3”);<br>
+				&nbsp;}
+		  }
+		  </code></p>
+		<br>
+		<p>This loop iterates through an array and outputs the array items</p>
+		<p><code>var foodArray = ["salmon", "pizza", "burger", "taco", "potato"]</code></p>
+		<p><code>for(var i = 0; i < foodArray.length; i++) {<br>
+			&nbsp;console.log(foodArray[i]);<br>
+		  }</code></p>
+		  <br>
+		  <p>Remember how we access array items by declaring the array name, then designating the index of the item between square brackets? For example, foodArray[2] would return "burger". In the above loop, we access a new array item each time the loop runs, because the "i" variable keeps increasing by 1. The first time the loop runs, i = 0, so we would be accessing the foodArray item at index 0, or foodArray[0].</p>
+		  <p>Then i increases by 1. So next time through the loop, i = 1, and we access item at foodArray[1]. Then foodArray[2], then foodArray[3], and so on, until i is no longer less than foodArray.length.</p>
+		  <p>foodArray.length would equal 5, since there are 5 items in the array. So, once i = 5, the loop stops, because 5 is no longer less than 5.</p>
+
+
+			<h3>3. Weekly Challenges</h3>
+			<ol>
+				<li>Create an array of your favorite movies. Create a loop that iterates through that array, and only outputs the item at index 2. HINT: Use a conditional in the loop to check if i = 2.</li>
+			</ol>
+		</section> -->
+	<!-- End week of 3/12/24 -->
+
+		<!-- <section class="main-section" id="loops">
 		<header>3/12/2024 - - JS Loops</header>
 		<h3>Overview</h3>
 		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
