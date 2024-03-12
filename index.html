@@ -16,8 +16,9 @@
 		<li><a class="nav-link" href="#objects">2/13/2024 - - JS Objects</a></li>
         <li><a class="nav-link" href="#functions">2/27/2024 - - JS Functions</a></li>
 		<li><a class="nav-link" href="#conditionals">3/5/2024 - - JS Conditionals</a></li>
-		<!-- <li><a class="nav-link" href="#loops">3/12/2024 - - JS Loops</a></li> -->
+		<li><a class="nav-link" href="#loops">3/12/2024 - - JS Loops</a></li>
 		<!-- <li><a class="nav-link" href="#algorithms">3/19/2024 - - JS Algorithms</a></li> -->
+        <!-- <li><a class="nav-link" href="#methods">3/26/2024 - - Object Methods</a></li> -->
       </ul>
     </nav>
 
@@ -516,7 +517,7 @@
 	<!-- End week of 3/5/24 -->
 
 
-	<!-- <section class="main-section" id="loops">
+	<section class="main-section" id="loops">
 		<header>3/12/2024 - - JS Loops</header>
 		<h3>Overview</h3>
 		<p>What is a Loop? A loop is a way to run the same code over and over again, with a different value.</p>
@@ -570,11 +571,77 @@
 			<ol>
 				<li>Create an array of your favorite movies. Create a loop that iterates through that array, and only outputs the item at index 2. HINT: Use a conditional in the loop to check if i = 2.</li>
 			</ol>
-		</section> -->
+		</section>
 	<!-- End week of 3/12/24 -->
 
 		<!-- <section class="main-section" id="algorithms">
 		<header>3/19/2024 - - JS Algorithms</header>
+		<h3>Overview</h3>
+		<p>What is an Algorithm? An algorithm is a set of commands to complete a specific task...Kind of like a function. Actually, exactly like a function.</p>
+        <p>Below are some Algorithm examples.</p>
+
+		<h3>FizzBuzz/h3>
+		<p>Write an algorithm that iterates through 1 - 100. If a number is divisible by 3, output the word “Fizz”, if divisible by 5, output the word “Buzz”, if divisible by both 3 and 5, output the word “FizzBuzz”. Otherwise, simply output the number.</p>
+
+        <h4>Solution</h4>
+		<p><code>for(var i = 1; i < 101; i++) {<br>
+  &nbsp;if (i % 15 == 0) { console.log(“FizzBuzz”); }<br>
+  &nbsp;else if (i % 3 == 0) { console.log(“Fizz”); }<br>
+  &nbsp;else if (i % 5 == 0) { console.log(“Buzz”); }<br>
+  &nbsp;else { console.log(i); }<br>
+}
+</code></p>
+
+		<h3>Word Reverse</h3>
+		<p>Write an algorithm that takes a word, and outputs the word backwards.</p>
+
+        <h4>Solution</h4>
+		<p><code>function wordReverse(word) {<br>
+  &nbsp;var newWord = “”;<br>
+  &nbsp;for (var i = word.length - 1; i >= 0; i--) {<br>
+     &nbsp;&nbsp;newWord += word[i];<br>
+  &nbsp;}<br>
+  &nbsp;return newWord;<br>
+}
+</code></p>
+
+		<h3>Find Number</h3>
+		<p>Given an array of numbers, write an algorithm that takes a number and returns true, if that number exists in the array. Extra credit, if it also returns the index where the number is found. The array is:</p>
+		<p><code>var numArray = [2, 49, 65, 7, 88, 23, 44, 33];</code></p>
+
+        <h4>Solution</h4>
+        <p><code>function findNumber(num) {<br>
+  &nbsp;for (var i = 0; i < numArray.length; i++) {<br>
+     &nbsp;&nbsp;if (num == numArray[i]) {<br>
+	  &nbsp;&nbsp;&nbsp;return true; // or return num + “ is found at index ” + i;<br>
+     &nbsp;&nbsp;}<br>
+  &nbsp;}<br>
+  &nbsp;return false;<br>
+}
+</code></p>
+
+		<h3>Rocky Fight Rounds</h3>
+		<p>Apollo Creed has 100 health points. Write an algorithm that takes a number, which represents Rocky’s punch power, and returns how many rounds it would take for Rocky to defeat Apollo.</p>
+
+        <h4>Solution</h4>
+		<p><code>function rockyPunchApollo(punchPower) {<br>
+  &nbsp;var apolloLife = 100;<br>
+  &nbsp;var roundCount = 0;<br>
+  &nbsp;while (apolloLife > 0) {<br>
+     &nbsp;&nbsp;apolloLife -= punchPower;<br>
+     &nbsp;&nbsp;roundCount++;<br>
+  &nbsp;}<br>
+  &nbsp;return roundCount;<br>
+}
+</code></p>
+
+			<h3>More Algorithm Challenges</h3>
+			<p>Go to  <a href="https://www.codewars.com/" target="_blank">Codewars</a> to practice hundreds...no thousands of other algorithms. Join for free, then start solving algorithms from beginner to expert!</p>
+		</section> -->
+	<!-- End week of 3/19/24 -->
+
+    <!-- <section class="main-section" id="methods">
+		<header>3/26/2024 - - Object Methods</header>
 		<h3>Overview</h3>
 		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
 
@@ -604,7 +671,7 @@
 				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
 			</ol>
 		</section> -->
-	<!-- End week of 3/19/24 -->
+	<!-- End week of 3/26/24 -->
 
 
     </main>
