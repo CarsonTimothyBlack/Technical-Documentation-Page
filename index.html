@@ -676,4 +676,684 @@
 
     </main>
   </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="technical.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body class="arete-touchstone">
+    <nav id="navbar">
+      <header>Arete - JavaScript Review and Challenges</header>
+      <ul>
+        <li class="js-login">Log into <a href="https://runjs.co/" target="_blank">runjs.co</a> to review and practice.</li>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#variables">1/23/2024 - - JS Variable Basics</a></li>
+		<li><a class="nav-link" href="#variables2">1/30/2024 - - JS Variable Methods and Operators</a></li>
+		<li><a class="nav-link" href="#arrays">2/6/2024 - - JS Arrays</a></li>
+		<li><a class="nav-link" href="#objects">2/13/2024 - - JS Objects</a></li>
+        <li><a class="nav-link" href="#functions">2/27/2024 - - JS Functions</a></li>
+		<li><a class="nav-link" href="#conditionals">3/5/2024 - - JS Conditionals</a></li>
+		<li><a class="nav-link" href="#loops">3/12/2024 - - JS Loops</a></li>
+		<!-- <li><a class="nav-link" href="#algorithms">3/19/2024 - - JS Algorithms</a></li> -->
+        <!-- <li><a class="nav-link" href="#methods">3/26/2024 - - Object Methods</a></li> -->
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <p>Hey Arete Students! This web page will serve as a touchstone for all of us to reference and review what we've learned. It will even provide some fun challenges for you to practice some JavaScript concepts. Rather than sending home worksheets, this will be our new format moving forward. Below you will see our weekly lessons start to accumulate. I have provided some on-page navigation to the left so you can quickly get to the section you wish to review. Happy Coding! </p>
+      </section>
+
+      <section class="main-section" id="variables">
+        <header>1/23/2024 - - JS Variable Basics</header>
+        <h3>Overview</h3>
+        <p>What is a Variable? A Variable is a container for storing data.</p>
+
+        <h3>1. Declaring a variable</h3>
+  <p>To use a variable, you must first “declare” it. For our class, we will be using the most common way of declaring a variable, namely using “var”. Here's an example of a variable being declared</p>
+        <p><code>var fishName = “Wanda”</code></p>
+        
+        <p>You can then reference that variable:</p>
+        <p><code>console.log(“My fish's name is” + fishName);</code></p>
+
+        <p>The above code will output “My fish's name is Wanda”.</p>
+        <p>You may also assign a different value to an existing variable.</p>
+        <p><code>var fishName = “Wanda”;</code></p>
+        <p><code>fishName = “Freddy”;</code></p>
+        <p><code>console.log(“My fish's name is” + fishName);</code></p>
+
+        <p>The above code will output “My fish's name is Freddy.</p>
+
+        <h3>2. Naming a variable</h3>
+        <p>Make sure to make your variable names descriptive, so that human readers (like you later on) can understand your code better.</p>
+        <span style="color:green;">GOOD</span>
+        <p><code>var freezingTempurature = 32;</code></p>
+
+        <span style="color:red;">BAD</span>
+        <p><code>var t = 32;</code></p>
+
+        <p>The most common variable naming format is called “camel case”. The variable name starts in lower case, then any added word has its first letter capitalized. This creates a "humped" effect...like a camel!</p>
+        <p><code>var thisVariableIsNamedUsingCamelCase = true;</code></p>
+
+        <h3>3. Data types and structures that can be stored in a variable</h3>
+
+        <h4>Strings</h4>
+        <p>A string value is anything with quotes around it. Even a number with quotes around it is technically a string</p>
+        <p><code>var myComputerTalks = “Hello World”;</code></p>
+        <p><code>var shout = “AHHHHH!”;</code></p>
+        <p><code>var excuse = “My dog ate my homework.”;</code></p>
+        <p><code>var notReallyNumber = “8”;</code></p>
+        <p><code>var iAmEightySeven = “8” + "7";</code></p>
+
+        <h4>Numbers</h4>
+        <p>A number value is, well, any number. Some coding languages require you to specify what kind of number you are declaring, like a whole number, or one with a decimal, or a negative number. JavaScript doesn't require you to be that specific. You just use any number for your value (without quotes), and JS will know it's a number.</p>
+        <p><code>var favoriteNumber = 13;</code></p>
+        <p><code>var holyDecimal = 7.77;</code></p>
+        <p><code>var negativeNancy = -13;</code></p>
+        <p><code>var four = 2 + 2;</code></p>
+
+        <h4>Boolean</h4>
+        <p>A boolean value is either true or false (again without quotes)</p>
+        <p><code>var godIsGood = true;</code></p>
+        <p><code>var iAmPerfect = false;</code></p>
+
+        <h4>Array</h4>
+        <p>An array is a data structure that is a set of values. This set is surrounded by square brackets “[]” and each item is separated by a comma. These can be a mix of data types, if needed.</p>
+        <p><code>var superHeroStrings =[“Batman”, “Spider-Man”, “Dogman”, “Person-Man”];</code></p>
+        <p><code>var luckyNumbers = [7, 13, 21, 88, 34];</code></p>
+        <p><code>var mixedDataTypeArray = [“A string”, 4, true, “I'm the last item!”];</code></p>
+
+        <h4>Object</h4>
+        <p>An object is another data structure that consists of what are called “key” and “value” pairs. This structure is surrounded by curly brackets “{}” and, again, each item pair is separated by a comma. Again, these items can be a mix of data types, if needed.</p>
+        <p><code>var myDog ={<br>
+            name: “Lola”,<br>
+            age: 2,<br>
+            lovesBath: false,<br>
+            favoriteWord: “Bark”<br>
+            };
+            </code></p>
+
+            <h3>4. Weekly Challenges</h3>
+            <ol>
+                <li>Declare a string variable for your favorite food. Give it any name you like. Try console logging it. Now add another string to the console log, so the console logs a full sentence. You can even create a new string variable that handles the rest of the sentence.</li>
+                <li>Create a few number variables. Try adding them together in a console log. Example <code>console.log(firstVariable + secondVariable)</code></li>
+                <li>Build an array that consists of your classmates. Console log the array. If your syntax is wrong, you'll get an error.</li>
+                <li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
+            </ol>
+      </section>
+	  	  <!-- End week of 1/23/24 -->
+
+	  <section class="main-section" id="variables2">
+        <header>1/30/2024 - - JS Variable Methods and Operators</header>
+
+        <h3>1. Operators</h3>
+  <p>“Operators” is the coding word to describe things like addition, subtraction, assignment, etc. For example, we use our Assignment Operator, or “=”, every time we give a variable a value:</p>
+        <p><code>var thisVariableEqualsTwenty = 20;</code></p>
+        
+        <p>You are probably familiar with how most of these operators will work, but I'm going to give you examples of most of the ones you will come across. See if you can guess what the outcome/output of each variable example will be:</p>
+		<br>
+
+		<h3><strong>Addition Operator +</strong></h3>
+        <p><code>var whatIsMyValue = 1 + 3;</code></p>
+        <p><code>console.log(whatIsMyValue);;</code></p>
+		<br>
+        <p><code>var whatIsMyValueNow = “1” + “3”;</code></p>
+        <p><code>console.log(whatIsMyValueNow);</code></p>
+		<br>
+		<p><code>var whatDoISay = “I love” + “ Pizza” + “!”;</code></p>
+		<p><code>console.log(whatDoISay);</code></p>
+		<br>
+		<p><code>var whatWillThisArrayDo = [“Potato”, “Carrot”, “Beet”] + [1, 8, 20];</code></p>
+		<p><code>console.log(whatWillThisArrayDo);</code></p>
+
+
+        <h3><strong>Increment Operator ++</strong></h3>
+		<p><code>var currentCountValue = 1;</code></p>
+		<p><code>currentCountValue++;</code></p>
+		<p><code>currentCountValue++;</code></p>
+		<p><code>console.log(currentCountValue);</code></p>
+
+
+        <h3><strong>Subtraction Operator -</strong></h3>
+		<p><code>var whatIsMyValue = 4 - 3;</code></p>
+		<p><code>console.log(whatIsMyValue);</code></p>
+		<br>
+		<p><code>var whatIsMyValueNow = “4” - “3”;</code></p>
+		<p><code>console.log(whatIsMyValueNow);</code></p>
+		<p>JS converts strings to numbers, if it makes sense to do so.</p>
+		<br>
+		<p><code>var whatDoISay = “I love” - “ Pizza”;</code></p>
+		<p><code>console.log(whatDoISay);</code></p>
+		<p>JS can't really subtract any other kind of string from another.</p>
+		<p>…At least in not so straight forward a way as with “-”</p>
+		<br>
+		<p><code>var whatWillThisArrayDo = [“Potato”, “Carrot”, “Beet”] - [1, 8, 20];</code></p>
+		<p><code>console.log(whatWillThisArrayDo);</code></p>
+		<p>Same with arrays. You'll get an error with the above code.</p>
+
+        <h3><strong>Decrement Operator --</strong></h3>
+		<p><code>var currentCountValue = 5;</code></p>
+		<p><code>currentCountValue--;</code></p>
+		<p><code>currentCountValue--;</code></p>
+		<p><code>console.log(currentCountValue);</code></p>
+
+        <h3><strong>Multiplication Operator *</strong></h3>
+		<p><code>var whatIsMyValue = 4 * 3;</code></p>
+		<p><code>console.log(whatIsMyValue);</code></p>
+
+        <h3><strong>Exponentiation Operator ** (to the power of)</strong></h3>
+        <p><code>var whatIsMyValue = 3**2; // 3 squared</code></p>
+		<p><code>console.log(whatIsMyValue);</code></p>
+		<br>
+		<p><code>var whatIsMyValueNow = 2**4; // 2 to the power of 4</code></p>
+		<p><code>console.log(whatIsMyValueNow);</code></p>
+
+        <h3><strong>Division Operator /</strong></h3>
+        <p><code>var whatIsMyValue = 10/2;</code></p>
+		<p><code>console.log(whatIsMyValue);</code></p>
+		<br>
+		<p><code>var whatIsMyValueNow = 5/3;</code></p>
+		<p><code>console.log(whatIsMyValueNow);</code></p>
+
+		<h3><strong>Modulus Operator %</strong></h3>
+		<p><code>var whatIsMyValue = 5%2;</code></p>
+		<p><code>console.log(whatIsMyValue);</code></p>
+		<br>
+		<p><code>var isNumberDivisibleByThree = 12%3;</code></p>
+		<p><code>console.log(isNumberDivisibleByThree);</code></p>
+		<p>Check to see if a number is divisible by another number by seeing if modulus operator returns a 0.</p>
+
+		<h3>2. Methods</h3>
+		<p>“Methods” are functions you can run on a particular variable. These are functions that are built into JavaScript, and are great ways to test or manipulate your variable. The basic syntax is variableName.methodName. Often the method name is followed by parentheses. On a side note, you can build your own methods in JavaScript. More on that in later weeks.</p>
+		<p>Below are some examples of methods:</p>
+
+		<h3><strong>String Methods</strong></h3>
+		<p><code>var longString = “Why am I so long?”;</code></p>
+		<p><code>console.log(longString.length);</code></p>
+		<br>
+		<p><code>var findTheZ = “What index is Z at?”;</code></p>
+		<p><code>console.log(findTheZ.charAt(14));</code></p>
+		<br>
+		<p><code>var iCanGetBigger = “i will be big someday.”;</code></p>
+		<p><code>console.log(iCanGetBigger.toUpperCase());</code></p>
+		<br>
+		<p><code>var iWantToBeSmall = “CAN YOU PLEASE SHRINK ME?”;</code></p>
+		<p><code>console.log(iWantToBeSmall.toLowerCase());</code></p>
+
+		<h3><strong>Number Methods</strong></h3>
+		<p><code>var iWantToBeString = 567;</code></p>
+		<p><code>console.log(iWantToBeString.toString() + “ is now a string!”);</code></p>
+
+		<h3><strong>Array Methods</strong></h3>
+		<p><code>var favoriteFruits =[“apple”, “pear”, “tomato”, “joy”];</code></p>
+		<p><code>console.log(favoriteFruits.length);</code></p>
+		<p><code>console.log(favoriteFruits.join(“,”));</code></p>
+		<br>
+		<p><code>favoriteFruits.push(“kindness”);</code></p>
+		<p><code>console.log(favoriteFruits);</code></p>
+		<br>
+		<p><code>favoriteFruits.pop();</code></p>
+		<p><code>console.log(favoriteFruits);</code></p>
+
+
+            <h3>3. Weekly Challenges</h3>
+            <ol>
+                <li>Play around with operators on different data types; try adding a boolean, or multiplying a string, etc. See what happens!</li>
+				<li>Play around with different methods on different data types. Try adding and removing items from an existing array.</li>
+            </ol>
+      </section>
+	  <!-- End week of 1/30/24 -->
+
+	  <section class="main-section" id="arrays">
+        <header>2/6/2024 - - JS Arrays</header>
+        <h3>Overview</h3>
+        <p>What is an Array? An array is a special variable, which can hold more than one value.</p>
+
+		<h3>1. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>var arrayName = [item1, item2, item3, …];</code></p>
+
+		<h3>2. When to use an array</h3>
+		<p>Arrays are a great way to structure your data. For instance, you could create 3 different food variables:</p>
+		<p><code>var food1 = “banana”;</code></p>
+		<p><code>var food2 = ham;</code></p>
+		<p><code>var food3 = taco;</code></p>
+
+		<p>And that would be fine, and work in JS. However, when you start to see similar data items, it may make more sense to group them into an array. Plus, there are some array-specific methods, or built in JS functions, that you couldn’t run on a single string value. In the example above, it may be more elegant in your code to have one food variable, with different items. Namely, a food array!</p>
+		<p><code>var foods = [“banana”, “ham”, “taco”];</code></p>
+
+		<h3>3. Accessing array items</h3>
+		<p>To access a value for a single item variable, like a String, Number, or Boolean, you simply reference the variable name:</p>
+		<p><code>var tinyString = “small”;</code></p>
+		<p><code>var sentenceStart = “Bugs are “;</code></p>
+		<p><code>console.log(sentenceStart + tinyString);</code></p>
+
+		<p>In the above example, we simply typed the variable names, in this case adding them together, to access their values.</p>
+		<p>With arrays, we would reference the array name, but also specify the index within the array for the value we wish to access. Array indexes start with 0, meaning the first item is at index 0, while the last item is at an index that equals the length of the array minus 1. Let me illustrate:
+		</p>
+
+		<p><code>var kickArray = [“roundhouse”, “karate”, “scissor”, “punch?”];</code></p>
+		<p><code>console.log(kickArray[0]); // Outputs “roundhouse”</code></p>
+		<p><code>console.log(kickArrray.length); // Outputs 4</code></p>
+		<p><code>console.log(kickArray[kickArray.length - 1]); // Outputs “punch?”</code></p>
+
+		<p>The kickArray length is 4, since there are 4 items. But, since the index starts at 0, the last item, in this case, would be at index 3, or kickArray.length (which equals 4) - 1.</p>
+		<p>Just like with single value variables, you can change the value of an array item:</p>
+
+		<p><code>var oneOfTheseIsOdd = [“Apple”, “Orange”, “Pajamas”, “Mango”, “Peach”];</code></p>
+		<p><code>console.log(oneOfTheseIsOdd[2]); // Outputs “Pajamas”</code></p>
+		<p><code>oneOfTheseIsOdd[2] = “Pear”;</code></p>
+		<p><code>console.log(oneOfTheseIsOdd[2]); // Now outputs “Pear”</code></p>
+		
+		
+		<h3>4. Array methods</h3>
+		<p>There are several methods you can run on an array. One might even say that there are an array of array methods. Well, maybe just I would say that. Anyway, I'm only going to list the most commonly used ones below. But feel free to research more on W3schools.</p>
+		
+		<strong><em>Array</em>.length</strong>
+		<p>We've seen this one before! This tells you how many items are in the array.</p>
+		<p><code>var howLongAmI = [1, “test”, true, “confusing”, 88];</code></p>
+		<p><code>console.log(howLongAmI.length); // Outputs 5</code></p>
+
+		<strong><em>Array</em>.toString()</strong>
+		<p>This method turns your array into one big string:</p>
+		<p><code>var iWantToBeAString = [“I”, “have”, 3, “kids”];</code></p>
+		<p><code>console.log(iWantToBeAString.toString); // “I, have, 3, kids”</code></p>
+
+		<strong><em>Array</em>.join()</strong>
+		<p>This method turns your array into one big string, with each item separated by the character you provide in the parentheses:</p>
+		<p><code>var iWantToBeAString = [“I”, “have”, 3, “kids”];</code></p>
+		<p><code>console.log(iWantToBeAString.join(“ “)); // “I have 3 kids”</code></p>
+		<p><code>console.log(iWantToBeAString.join(“*“)); // “I*have*3*kids”</code></p>
+		<p><code>console.log(iWantToBeAString.join(“shm“)); // “Ishmhaveshm3shmkids”</code></p>
+
+		<strong><em>Array</em>.push()</strong>
+		<p>This is the most common method to add an item to an array. It adds the specified item to the end of the array:</p>
+		<p><code>var iAmMissingSomething = [“I”, “have”, 3];</code></p>
+		<p><code>iAmMissingSomething.push(“baboons”);</code></p>
+		<p><code>console.log(iAmMissingSomething.join(“ “)); // “I have 3 baboons”</code></p>
+
+            <h3>5. Weekly Challenges</h3>
+            <ol>
+                <li>Create an array of your favorite foods. Console log the 3rd item in your array. Remember that arrays start at index 0.</li>
+                <li>Turn your array into a single string, where each item is separated by a "?".</li>
+				<li>Add a new food to the end of your arrary.</li>
+				<li>Other Array methods. See, and describe what happens when you...
+					<ul>
+						<li>Run reverse() on your array.</li>
+						<li>Run sort() on your array.</li>
+						<li>Run indexOf() on your array. Put one of your array items in the parentheses. Example:
+							<p><code>var imAnArray = ["fun", "sun", "pun", "done"];</code></p>
+							<p><code>console.log(imAnArray.indexOf("pun"));</code></p>
+						</li>
+					</ul>
+				</li>
+            </ol>
+      </section>
+	  	  <!-- End week of 2/6/24 -->
+
+		<section class="main-section" id="objects">
+		<header>2/13/2024 - - JS Objects</header>
+		<h3>Overview</h3>
+		<p>What is an Object? An object is a variable that describes many parts of a single thing</p>
+
+		<h3>1. Real life objects, properties, and methods</h3>
+		<p>We experience objects in real life all the time that have properties (or descriptions), and usually methods (or actions) as well. For example, in real life you may have a…</p>
+		<p><strong>OBJECT - - </strong> car</p>
+		<br>
+		<p><strong>PROPERTIES - - </strong>
+		<ul>
+			<li>car.name = ol' Bessy</li>
+			<li>car.brand = Chrysler</li>
+			<li>car.color = red</li>
+			<li>car.age = old</li>
+		</ul>
+		</p>
+		<br>
+		<p><strong>METHODS - - </strong>
+		<ul>
+			<li>car.start()</li>
+			<li>car.drive()</li>
+			<li>car.break()</li>
+			<li>car.stop()</li>
+			<li>car.explode()</li>
+		</ul>
+		</p>
+
+		<h3>2. JavaScript Objects</h3>
+		<p>You can translate all this into a JavaScript object that looks like this:</p>
+		<p><code>var myCar = {<br>
+			&nbsp;name: “ol Bessy”,<br>
+			&nbsp;brand: “Chrysler”,<br>
+			&nbsp;color: “red”,<br>
+			&nbsp;old: true,<br>
+			&nbsp;start: function() {<br>
+				&nbsp;&nbsp;return “Push break, and turn key”;<br> 
+				&nbsp;}<br>
+				&nbsp;explode: function() {<br>
+					&nbsp;&nbsp;return “Keep driving this old thing. Eventually, it will        explode.”;<br>
+			   &nbsp;}<br>
+		   }
+		   </code></p>
+
+		<h3>3. Basic Syntax</h3>
+		<p>Below is the basic syntax for a JS object. As with most code, spaces and line breaks don;t often matter. This example is fine:</p>
+		<p><code>var <em>objectName</em> = {property1: value1, property2: value2, property3: value3};</code></p>
+		<br>
+		<p>You don't need to break lines for each property. However, line breaks do make it easier for humans to read it, and they become almost necessary, when you start to include methods. So, you will more often see objects with line breaks like this:</p>
+		<p><code>var objectName = {<br>
+			&nbsp;property1: value1,<br>
+			&nbsp;property2: value2,<br>
+			&nbsp;property3: value3<br>
+			&nbsp;methodName: function() {<br>
+				&nbsp;&nbsp;//code to run when method is called<br>
+			  &nbsp;}<br>
+		   }
+		   </code></p>
+
+		<h3>4. Accessing Object Properties and Methods</h3>
+		<p>To access properties and methods in an Object, we first call the object name, then reference the property or method name, with a period in-between. Using our car object above we would access items like this:</p>
+		<p><code>console.log(car.name);  // Outputs “ol Bessy”</code></p>
+		<p><code>console.log(car.old);  // Outputs true</code></p>
+		<p><code>console.log(car.start());  // Outputs “Push break, and turn key”</code></p>
+
+			<h3>5. Weekly Challenges</h3>
+			<ol>
+				<li>Make up a unique object of your own, which includes at least one method.</li>
+				<li>Play around with accessing the various properties or methods.</li>
+			</ol>
+		</section>
+	<!-- End week of 2/13/24 -->
+
+		<section class="main-section" id="functions">
+		<header>2/27/2024 - - JS Functions</header>
+		<h3>Overview</h3>
+		<p>What is a Function? A function is a block of code designed to perform a particular task.</p>
+
+		<h3>1. Function Syntax</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>function myFirstFunction() {<br>
+            &nbsp;// Put your block of code in here. It can be as short or long<br>
+            &nbsp;// as you like!<br>
+          }
+          </code></p>
+
+		<h3>2. Function Example</h3>
+		<p>Functions usually “return” something at the end. Here's an example of a function:</p>
+		<p><code>function itsAlive() {<br>
+            &nbsp;return “Hello World!”;<br>
+          }
+          </code></p>
+        <br>
+        <p><code>console.log(itsAlive());</code></p>
+
+		<h3>3. Function Parameters</h3>
+		<p>It is very common for functions to take parameters, also called “arguments”. These are variables you place inside the parenthesis, that can change depending on what you feed to the function, when calling it. Here's an example:</p>
+		<p><code>function myFavoriteColor(color) {<br>
+            &nbsp;return “My favorite color is ” + color;<br>
+          }
+          </code></p>
+          <br>
+        <p><code>console.log(myFavoriteColor(“green”));</code></p>
+        <p><code>console.log(myFavoriteColor(“blue”));</code></p>
+        <p><code>console.log(myFavoriteColor(2));</code></p>
+
+        <p>Make your function more flexible with more parameters:</p>
+        <p><code>function identifyMe(name, age, favoriteMovie) {<br>
+            &nbsp;return “My name is ” + name + “. I am “ + age + “years old. My favorite movie is “ + favoriteMovie + “.”;<br>
+          }
+          
+          </code></p>
+          <br>
+          <p><code>console.log(identifyMe(“Burt”, 35, ”Waterworld”));</code></p>
+          <p><code>console.log(identifyMe(“Nancy”, 13, ”Brave Heart”));</code></p>
+
+		<h3>4. Functions and Algorithms</h3>
+		<p>Basically, functions and algorithms are the same thing. They both are a block of code that is meant to complete a particular task.</p>
+        <p>Here's an example of an algorithm (or function) that adds any two numbers given to it, when called:</p>
+		<p><code>function sumOfNumbers(num1, num2) {<br>
+            &nbsp;return num1 + num2;<br>
+          }
+          </code></p>
+          <br>
+          <p><code>console.log(sumOfNumbers(5, 8));</code></p>
+
+			<h3>5. Weekly Challenges</h3>
+			<ol>
+				<li>Return the difference between 2 numbers (subract one from the other).</li>
+				<li>Return a user's name, age, and preferred coding language.</li>
+				<li>Returns what year it will be, 3 years from the current year..</li>
+			</ol>
+		</section>
+	<!-- End week of 2/27/24 -->
+
+
+   <section class="main-section" id="conditionals">
+		<header>3/5/2024 - - JS Conditionals</header>
+		<h3>Overview</h3>
+		<p>What is a Conditional? A conditional is a block of code that only runs, if a condition is meant.</p>
+
+		<h3>1. Conditional Syntax</h3>
+		<p>To create a conditionall, use the following syntax:</p>
+		<p><code>if (<em>condition to meet</em>) {<br>
+			&nbsp;<em>code to run, if condition is met</em><br>
+		  }
+		  </code></p>
+		  <br>
+		  <p>Here's an example of a real conditional:</p>
+		  <p><code>if (5 < 6) {<br>
+			  &nbsp;console.log("Yep! 5 is less than 6.");<br>
+			}
+			</code></p>
+
+		<h3>2. if..else and else if</h3>
+		<p>If your initial condition is not met, run a different block of code with "else":</p>
+		<p><code>var myMathScore = 90;<br>
+			if (myMathScore > 80) {<br>
+				&nbsp;console.log(“I got an A!”);<br>
+			} else {<br>
+				&nbsp;console.log(“I got kicked out of school!”);<br>
+			}
+			</code></p>
+			<br>
+
+			<p>If you want to check against several conditions, use "else if":</p>
+		<p><code>var myMathScore = 75;<br>
+			if (myMathScore > 80) {<br>
+				&nbsp;console.log(“I got an A!”);<br>
+			} else if (myMathScore > 70) {<br>
+				&nbsp;console.log(“I got a B!”);<br>
+			} else if (myMathScore > 60) {<br>
+				&nbsp;console.log("I got a C...");<br>
+			} else if (myMathScore > 50) {<br>
+				&nbsp;console.log("I got a D...");<br>
+			} else if (myMathScore > 40) {<br>
+				&nbsp;console.log("I'm not doing so well...");<br>
+			} else {<br>
+				&nbsp;console.log("They kicked me out of school!");<br>
+			}</code></p>
+
+		<h3>3. AND(&&)…OR(||)</h3>
+		<p>If you want to check against multiple conditionals before a single block of code runs, you can use AND/OR syntax.</p>
+<br>
+<p>AND is used when every condition must be true to run a block of code:</p>
+		<p><code>if (5 > 6 && 11 > 2 && 7 == 7) {<br>
+			&nbsp;console.log(“Hooray! We can trust math!”);<br>
+		}</code></p>
+		<br>
+		<p>OR is used if at least one condition is true:</p>
+		<p><code>if (5 > 6 || 11 > 55 || 7 == 2) {<br>
+			&nbsp;console.log(“...Some of that math is wrong. But...ok!”);<br>
+		}</code></p>
+
+			<h3>4. Weekly Challenges</h3>
+			<ol>
+				<li>Create a function that takes a person's name and age, and outputs different pieces of code, depending on the age given. For example, if function is called "howOldAmI", then running howOlldAmI("Burt", 5) might return "Burt is pretty young!"</li>
+			</ol>
+		</section>
+	<!-- End week of 3/5/24 -->
+
+
+	<section class="main-section" id="loops">
+		<header>3/12/2024 - - JS Loops</header>
+		<h3>Overview</h3>
+		<p>What is a Loop? A loop is a way to run the same code over and over again, with a different value.</p>
+
+		<h3>1. "for" Loop Syntax</h3>
+		<p>To create a loop, use the following syntax:</p>
+		<p><code>for(var i = 0; i < 100; i++) {<br>
+			&nbsp;console.log(i);<br>
+		  }
+		  </code></p>
+		  <br>
+		  <p>The above loop will log the numbers 0 - 99 in the console.</p>
+		  <p>Let's break down the parameters that lie within the parentheses:</p>
+		  <ol>
+			<li>Create a counting variable and set its beginning value; var i = 0. This can be called anything, but usually it's “i”, since it often refers to the index of a particular set of values you are iterating over.</li>
+			<li>Set the condition “i” must meet, in order to run the code block; i < 100. This translates in English to, “if the variable “i” is less than 100, run the loop code block again. The “i” variable will change each time the loop runs, and thus get tested against this condition before running each loop. It changes because of…</li>
+			<li>Increase or decrease the count variable each time the loop runs; i++. i++ means that, everytime the loop runs, i will increase by 1.</li>
+		  </ol>
+
+		<h3>2. Loop Examples</h3>
+		<p>This loop will output 0 - 98 in console, counting by 2s, ie. 0, 2, 4, 6, etc.</p>
+		<p><code>for (var i = 0; i < 100; i + 2) {<br>
+			&nbsp;console.log(i);<br>
+		  }</code></p>
+		  <br>
+		  <p>This loop will output 100 - 1, counting backwards</p>
+		<p><code>for (var i = 100; i > 0; i--) {<br>
+			&nbsp;console.log(i);<br>
+		  }</code></p>
+		  <br>
+		  <p>This loop only outputs numbers that are divisible by 3</p>
+		<p><code>for (var i = 0; i < 100; i++) {<br>
+			&nbsp;if (i % 3 == 0) {<br>
+				&nbsp;&nbsp;console.log(i + “ is divisible by 3”);<br>
+				&nbsp;}<br>
+		  }
+		  </code></p>
+		<br>
+		<p>This loop iterates through an array and outputs the array items</p>
+		<p><code>var foodArray = ["salmon", "pizza", "burger", "taco", "potato"]</code></p>
+		<p><code>for(var i = 0; i < foodArray.length; i++) {<br>
+			&nbsp;console.log(foodArray[i]);<br>
+		  }</code></p>
+		  <br>
+		  <p>Remember how we access array items by declaring the array name, then designating the index of the item between square brackets? For example, foodArray[2] would return "burger". In the above loop, we access a new array item each time the loop runs, because the "i" variable keeps increasing by 1. The first time the loop runs, i = 0, so we would be accessing the foodArray item at index 0, or foodArray[0].</p>
+		  <p>Then i increases by 1. So next time through the loop, i = 1, and we access item at foodArray[1]. Then foodArray[2], then foodArray[3], and so on, until i is no longer less than foodArray.length.</p>
+		  <p>foodArray.length would equal 5, since there are 5 items in the array. So, once i = 5, the loop stops, because 5 is no longer less than 5.</p>
+
+
+			<h3>3. Weekly Challenges</h3>
+			<ol>
+				<li>Create an array of your favorite movies. Create a loop that iterates through that array, and only outputs the item at index 2. HINT: Use a conditional in the loop to check if i = 2.</li>
+			</ol>
+		</section>
+	<!-- End week of 3/12/24 -->
+
+		<!-- <section class="main-section" id="algorithms">
+		<header>3/19/2024 - - JS Algorithms</header>
+		<h3>Overview</h3>
+		<p>What is an Algorithm? An algorithm is a set of commands to complete a specific task...Kind of like a function. Actually, exactly like a function.</p>
+        <p>Below are some Algorithm examples.</p>
+
+		<h3>FizzBuzz/h3>
+		<p>Write an algorithm that iterates through 1 - 100. If a number is divisible by 3, output the word “Fizz”, if divisible by 5, output the word “Buzz”, if divisible by both 3 and 5, output the word “FizzBuzz”. Otherwise, simply output the number.</p>
+
+        <h4>Solution</h4>
+		<p><code>for(var i = 1; i < 101; i++) {<br>
+  &nbsp;if (i % 15 == 0) { console.log(“FizzBuzz”); }<br>
+  &nbsp;else if (i % 3 == 0) { console.log(“Fizz”); }<br>
+  &nbsp;else if (i % 5 == 0) { console.log(“Buzz”); }<br>
+  &nbsp;else { console.log(i); }<br>
+}
+</code></p>
+
+		<h3>Word Reverse</h3>
+		<p>Write an algorithm that takes a word, and outputs the word backwards.</p>
+
+        <h4>Solution</h4>
+		<p><code>function wordReverse(word) {<br>
+  &nbsp;var newWord = “”;<br>
+  &nbsp;for (var i = word.length - 1; i >= 0; i--) {<br>
+     &nbsp;&nbsp;newWord += word[i];<br>
+  &nbsp;}<br>
+  &nbsp;return newWord;<br>
+}
+</code></p>
+
+		<h3>Find Number</h3>
+		<p>Given an array of numbers, write an algorithm that takes a number and returns true, if that number exists in the array. Extra credit, if it also returns the index where the number is found. The array is:</p>
+		<p><code>var numArray = [2, 49, 65, 7, 88, 23, 44, 33];</code></p>
+
+        <h4>Solution</h4>
+        <p><code>function findNumber(num) {<br>
+  &nbsp;for (var i = 0; i < numArray.length; i++) {<br>
+     &nbsp;&nbsp;if (num == numArray[i]) {<br>
+	  &nbsp;&nbsp;&nbsp;return true; // or return num + “ is found at index ” + i;<br>
+     &nbsp;&nbsp;}<br>
+  &nbsp;}<br>
+  &nbsp;return false;<br>
+}
+</code></p>
+
+		<h3>Rocky Fight Rounds</h3>
+		<p>Apollo Creed has 100 health points. Write an algorithm that takes a number, which represents Rocky’s punch power, and returns how many rounds it would take for Rocky to defeat Apollo.</p>
+
+        <h4>Solution</h4>
+		<p><code>function rockyPunchApollo(punchPower) {<br>
+  &nbsp;var apolloLife = 100;<br>
+  &nbsp;var roundCount = 0;<br>
+  &nbsp;while (apolloLife > 0) {<br>
+     &nbsp;&nbsp;apolloLife -= punchPower;<br>
+     &nbsp;&nbsp;roundCount++;<br>
+  &nbsp;}<br>
+  &nbsp;return roundCount;<br>
+}
+</code></p>
+
+			<h3>More Algorithm Challenges</h3>
+			<p>Go to  <a href="https://www.codewars.com/" target="_blank">Codewars</a> to practice hundreds...no thousands of other algorithms. Join for free, then start solving algorithms from beginner to expert!</p>
+		</section> -->
+	<!-- End week of 3/19/24 -->
+
+    <!-- <section class="main-section" id="methods">
+		<header>3/26/2024 - - Object Methods</header>
+		<h3>Overview</h3>
+		<p>An object method is simply a function that you can access within an object.</p>
+
+		<h3>1. Syntax</h3>
+		<p>We’ve briefly looked at these, but we haven’t gotten specific about what they are, and how to build them. Below is the basic syntax for a method within an object. The item, "fulllName" is in example of a method:</p>
+		<p><code>var person = {<br>
+  &nbsp;firstName: "John",<br>
+  &nbsp;lastName : "Doe",<br>
+  &nbsp;id   	: 5566,<br>
+  &nbsp;fullName : function() {<br>
+    &nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
+  &nbsp;}<br>
+};
+</code></p>
+
+		<h3>2. Calling a Method</h3>
+		<p>Calling a method is as simple as accessing an item in the object. Only, in this case the item is a kind of "function". To call the "fullName" method from above, you would first reference the object, then access the "fullName" method of that object, like this:</p>
+		<p><code>person.fullName();</code></p>
+
+		<h3>3. Look Familiar?</h3>
+		<p>Remember when I said everything in JavaScript is an object? You’ve been working with methods on Strings, or Arrays, etc. In essence, those String variables you create, are instances of a greater String object that has several methods baked into it. Like:</p>
+		<p><code>String.length;</code></p>
+        <p><code>String.toUpperCase();</code></p>
+        <p><code>String.toLowerCase();</code></p>
+        <p><code>String.replace();</code></p>
+
+		<h3>4. Algorithm ideas</h3>
+		<p>A really good way to practice solving algorithms, and to get really comfortable with JS built in methods is to try and create your own function that imitates something already done with a built in method.
+For instance, we know String.length returns the length of a string. How would you write an algorithm that does the same thing?
+</p>
+		</section> -->
+	<!-- End week of 3/26/24 -->
+
+
+    </main>
+  </body>
 </html>
