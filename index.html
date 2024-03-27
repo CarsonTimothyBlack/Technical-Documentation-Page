@@ -18,7 +18,9 @@
 		<li><a class="nav-link" href="#conditionals">3/5/2024 - - JS Conditionals</a></li>
 		<li><a class="nav-link" href="#loops">3/12/2024 - - JS Loops</a></li>
 		<li><a class="nav-link" href="#algorithms">3/19/2024 - - JS Algorithms</a></li>
-        <!-- <li><a class="nav-link" href="#methods">3/26/2024 - - Object Methods</a></li> -->
+        <li><a class="nav-link" href="#methods">3/26/2024 - - Object Methods</a></li>
+        <!-- <li><a class="nav-link" href="#dom">4/09/2024 - - DOM Manipulation</a></li>
+        <li><a class="nav-link" href="#gamecode">4/16/2024 - - Game Code</a></li> -->
       </ul>
     </nav>
 
@@ -640,8 +642,53 @@
 		</section>
 	<!-- End week of 3/19/24 -->
 
-    <!-- <section class="main-section" id="methods">
+    <section class="main-section" id="methods">
 		<header>3/26/2024 - - Object Methods</header>
+		<h3>Overview</h3>
+		<p>An object method is simply a function that you can access within an object.</p>
+
+		<h3>1. Syntax</h3>
+		<p>We've briefly looked at these, but we haven't gotten specific about what they are, and how to build them. Below is the basic syntax for a method within an object.</p>
+		<p><code>var person = {<br>
+            &nbsp;firstName: "John",<br>
+            &nbsp;lastName : "Doe",<br>
+            &nbsp;id   	: 5566,<br>
+            &nbsp;fullName : function() {<br>
+                &nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
+              &nbsp;}<br>
+          };
+          </code></p>
+
+		<h3>2. Calling a Method</h3>
+		<p>Call the above "fullName" method:</p>
+		<p><code>person.fullName();</code></p>
+
+		<h3>3. Look Familiar?</h3>
+		<p>Remember when I said everything in JavaScript is an object? You’ve been working with methods on Strings, or Arrays, etc. In essence, those String variables you create, are instances of a greater String object that has several methods baked into it. Like:</p>
+		<p><code>String.length;</code></p>
+        <p><code>String.toUpperCase();</code></p>
+        <p><code>String.toLowerCase();</code></p>
+        <p><code>String.replace();</code></p>
+
+			<h3>4. Weekly Challenges</h3>
+            <p>A really good way to practice solving algorithms, and to get really comfortable with JS built in methods is to try and create your own function that imitates something already done with a built in method.</p>
+               <p>For instance, we know String.length returns the length of a string. How would you write an algorithm that does the same thing? Here's one way:
+                </p>
+                <p><code>function getLength(string) {<br>
+                    &nbsp;var stringLength = 0;<br>
+                    &nbsp;var stringArray = string.split(“”); // Turns string into an array<br>
+                    &nbsp; while (stringArray[0] != undefined) { // While array has an item<br>
+                        &nbsp;&nbsp; stringArray.pop(); // Removes an array item per loop<br>
+                        &nbsp;&nbsp; stringLength++; // increases length variable by 1<br>
+                        &nbsp;}<br>
+                        &nbsp;return stringLength; // Returns the final count<br>
+                   }
+                   </code></p>
+		</section>
+	<!-- End week of 3/26/24 -->
+
+        <!-- <section class="main-section" id="dom">
+		<header>4/09/2024 - - DOM Manipulation</header>
 		<h3>Overview</h3>
 		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
 
@@ -671,7 +718,41 @@
 				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
 			</ol>
 		</section> -->
-	<!-- End week of 3/26/24 -->
+	<!-- End week of 4/09/24 -->
+
+
+        <!-- <section class="main-section" id="gamecode">
+		<header>4/16/2024 - - Game Code</header>
+		<h3>Overview</h3>
+		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
+
+		<h3>1. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>var arrayName = [item1, item2, item3, …];</code></p>
+
+		<h3>2. When to use an array</h3>
+		<p>Arrays are a great way to structure your data. For instance, you could create 3 different food variables:</p>
+		<p><code>XXXXX</code></p>
+		<p><code>XXXXX</code></p>
+		<p><code>XXXXX</code></p>
+
+		<h3>3. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>XXXXX</code></p>
+
+		<h3>4. Creating an Arrray</h3>
+		<p>To create an array, use the following syntax:</p>
+		<p><code>XXXXX</code></p>
+
+			<h3>4. Weekly Challenges</h3>
+			<ol>
+				<li>Declare a string variable for your favorite food. Give it any name you like. Try console logging it. Now add another string to the console log, so the console logs a full sentence. You can even create a new string variable that handles the rest of the sentence.</li>
+				<li>Create a few number variables. Try adding them together in a console log. Example <code>console.log(firstVariable + secondVariable)</code></li>
+				<li>Build an array that consists of your classmates. Console log the array. If your syntax is wrong, you'll get an error.</li>
+				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
+			</ol>
+		</section> -->
+	<!-- End week of 4/16/24 -->
 
 
     </main>
