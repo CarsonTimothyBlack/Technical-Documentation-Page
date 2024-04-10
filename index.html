@@ -19,8 +19,7 @@
 		<li><a class="nav-link" href="#loops">3/12/2024 - - JS Loops</a></li>
 		<li><a class="nav-link" href="#algorithms">3/19/2024 - - JS Algorithms</a></li>
         <li><a class="nav-link" href="#methods">3/26/2024 - - Object Methods</a></li>
-        <!-- <li><a class="nav-link" href="#dom">4/09/2024 - - DOM Manipulation</a></li>
-        <li><a class="nav-link" href="#gamecode">4/16/2024 - - Game Code</a></li> -->
+        <li><a class="nav-link" href="#dom">Last Class! - - DOM Manipulation & Game Code</a></li>
       </ul>
     </nav>
 
@@ -687,72 +686,208 @@
 		</section>
 	<!-- End week of 3/26/24 -->
 
-        <!-- <section class="main-section" id="dom">
-		<header>4/09/2024 - - DOM Manipulation</header>
+        <section class="main-section" id="dom">
+		<header>Last Class Stuff - - DOM Manipulation & Game Code</header>
 		<h3>Overview</h3>
-		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
+		<p>Now we bring it all together! With JavaScript we can execute DOM Manipulation to change our HTML structure, and make it do cool things. Knowing this, I bet we can manipulate the DOM enough to make a game. Below is the finished code for our Red vs. Blue game. We started building it this week, but will finish next week. I encourage the students to copy and paste this into a CodePen of their own, get familiar with it, and play around with it!</p>
+		<p>Code is "minified", meaning you won't see line breaks, etc. I encourage students to attempt to format themselves to make it easier for them to read, or look up an online formatter before pasting code into CodePen. This is a great developer skill to practice!</p>
+		<p>Also, there is some JQuery involved in the Javascript section. In order for this to work in CodePen, you have to clikc on the little gear icon in the JS section of your Pen, which will open up some settings options. In the section titled "Add External Scripts/Pens", start typing "Jquery" in the Search input. Click on the top "Jquery" option, then click the green "Close" button at the bottom right of the window. You now have the JQuery file linked to your Pen! It will recognize JQuery syntax, and won't throw any errors at you.</p>
 
-		<h3>1. Creating an Arrray</h3>
-		<p>To create an array, use the following syntax:</p>
-		<p><code>var arrayName = [item1, item2, item3, …];</code></p>
+		<h2>Red vs. Blue Code</h2>
 
-		<h3>2. When to use an array</h3>
-		<p>Arrays are a great way to structure your data. For instance, you could create 3 different food variables:</p>
-		<p><code>XXXXX</code></p>
-		<p><code>XXXXX</code></p>
-		<p><code>XXXXX</code></p>
+		<h3>HTML</h3>
+		<p><code>
+			<h2>Red vs. Blue</h2>
+<p class="game-description">Pick who you think will win, then click the "Fight" button. Each block will attack eachother with randomly generated attack power, until one of them runs out of Hit Points (HP).</p>
+<br>
+<br>
+<div class="fight-interface">
+  <div id="fightCage">
+    <div id="fightResult"><strong></strong></div>
+  <div id="redFighter" class="box-fighter"><span class="battle-grunt">Ouch!</span><span class="box-life">15</span></div>
+    <div id="blueFighter" class="box-fighter"><span class="battle-grunt">Hey!!!</span><span class="box-life">15</span></div>
+</div>
+</div>
+<div class="fight-button">
+    <button id="beginFight">FIGHT!</button>
 
-		<h3>3. Creating an Arrray</h3>
-		<p>To create an array, use the following syntax:</p>
-		<p><code>XXXXX</code></p>
+		</code></p>
 
-		<h3>4. Creating an Arrray</h3>
-		<p>To create an array, use the following syntax:</p>
-		<p><code>XXXXX</code></p>
+		<h3>CSS</h3>
+		<p><code>
+			.game-description {
+				width: 50%;
+			  }
+			  
+			  .winner-button {
+				padding: 10px 25px;
+				font-size: 16px;
+				margin: 0 25px;
+			  }
+			  
+			  .fight-interface {
+				display: flex;
+			  }
+			  
+			  #fightCage {
+				border: 12px double green;
+				border-radius: 50%;
+				width: 50%;
+				height: 300px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-top: 30px;
+				position: relative;
+			  }
+			  
+			  #fightResult {
+				font-size: 24px;
+				font-weight: bold;
+				position: absolute;
+				text-align: center;
+				text-transform: uppercase;
+				bottom: 50px;
+				width: 100%;
+			  }
+			  
+			  .box-fighter {
+				display: flex;
+				align-items: center;
+				border: 2px solid black;
+				color: white;
+				font-size: 45px;
+				justify-content: center;
+				margin: 0 25px;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				transition: all .1s ease;
+			  }
+			  
+			  span.battle-grunt {
+				color: black;
+				font-size: 30px;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				transition: all .5s ease;
+			  }
+			  
+			  span.battle-grunt.active {
+				opacity: 1;
+				top: -55px;
+			  }
+			  
+			  .box-fighter.dead {
+				  background: white !important;
+				  color: black;
+				  border-radius: 50px 50px 0 0;
+			  }
+			  
+			  #redFighter {
+				background: red;
+				left: 0;
+			  }
+			  
+			  #redFighter.attack {
+				left: 55px;
+			  }
+			  
+			  #blueFighter {
+				background: blue;
+				right: 0;
+			  }
+			  
+			  .fight-button {
+				text-align: center;
+				width: 50%;
+			  }
+			  
+			  #beginFight {
+				border-radius: 10px;
+				font-size: 24px;
+				margin-top: 30px;
+				padding: 10px 25px;
+				transition: all 1s ease;
+				width: 50%;
+			  }
+			  
+			  #beginFight:hover {
+				background: lightblue;
+			  }
+			  
+			  #blueFighter.attack {
+				right: 55px;
+			  }
+			  
+		</code></p>
 
-			<h3>4. Weekly Challenges</h3>
-			<ol>
-				<li>Declare a string variable for your favorite food. Give it any name you like. Try console logging it. Now add another string to the console log, so the console logs a full sentence. You can even create a new string variable that handles the rest of the sentence.</li>
-				<li>Create a few number variables. Try adding them together in a console log. Example <code>console.log(firstVariable + secondVariable)</code></li>
-				<li>Build an array that consists of your classmates. Console log the array. If your syntax is wrong, you'll get an error.</li>
-				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
-			</ol>
-		</section> -->
+		<h3>JavaScript/Jquery</h3>
+		<p><code>
+			var redLife = 15;
+var blueLife = 15;
+
+function manageFight(color) {
+  var attackPower = Math.floor(Math.random() * 5);
+  console.log(redLife, blueLife);
+  if(redLife <= 0 || blueLife <=0) {
+    $("#fightResult strong").text("Fight is over, dude!");
+  } else {
+        setTimeout(() => {
+      $("#" + color + "Fighter").toggleClass("attack");
+      $("#fightResult strong").text(`${color} attacked for ${attackPower}`);
+      if (colorTurn == "red") {
+          $("#blueFighter span.battle-grunt").toggleClass("active");
+      } else {
+          $("#redFighter span.battle-grunt").toggleClass("active");
+      }
+    }, "300");
+  
+    setTimeout(() => {
+    	$("#" + color + "Fighter").toggleClass("attack");
+        if (colorTurn == "red") {
+        	$("#blueFighter span.battle-grunt").toggleClass("active");
+      	} else {
+            $("#redFighter span.battle-grunt").toggleClass("active");
+      	}
+    }, "800");
+  
+    setTimeout(() => {
+      if (colorTurn == "red") {
+        blueLife = blueLife - attackPower;
+        $("#blueFighter span.box-life").text(blueLife);
+        colorTurn = "blue";
+      } else {
+        redLife = redLife - attackPower;
+        $("#redFighter span.box-life").text(redLife);
+          colorTurn = "red";
+      }
+
+      if (redLife <= 0) {
+        $("#fightResult strong").text("Blue wins!");
+        $("#redFighter").addClass("dead").text("RIP");
+      }
+      if (blueLife <= 0) {
+        $("#fightResult strong").text("Red wins!");
+         $("#blueFighter").addClass("dead").text("RIP");
+      }
+      
+	}, "1000");
+  }
+}
+
+var colorTurn = "red";
+
+$("#beginFight").on("click", function() {
+manageFight(colorTurn);
+});
+
+		</code></p>
+
+		</section>
 	<!-- End week of 4/09/24 -->
-
-
-        <!-- <section class="main-section" id="gamecode">
-		<header>4/16/2024 - - Game Code</header>
-		<h3>Overview</h3>
-		<p>What is an Array? An array is a special variable, which can hold more than one value.</p>
-
-		<h3>1. Creating an Arrray</h3>
-		<p>To create an array, use the following syntax:</p>
-		<p><code>var arrayName = [item1, item2, item3, …];</code></p>
-
-		<h3>2. When to use an array</h3>
-		<p>Arrays are a great way to structure your data. For instance, you could create 3 different food variables:</p>
-		<p><code>XXXXX</code></p>
-		<p><code>XXXXX</code></p>
-		<p><code>XXXXX</code></p>
-
-		<h3>3. Creating an Arrray</h3>
-		<p>To create an array, use the following syntax:</p>
-		<p><code>XXXXX</code></p>
-
-		<h3>4. Creating an Arrray</h3>
-		<p>To create an array, use the following syntax:</p>
-		<p><code>XXXXX</code></p>
-
-			<h3>4. Weekly Challenges</h3>
-			<ol>
-				<li>Declare a string variable for your favorite food. Give it any name you like. Try console logging it. Now add another string to the console log, so the console logs a full sentence. You can even create a new string variable that handles the rest of the sentence.</li>
-				<li>Create a few number variables. Try adding them together in a console log. Example <code>console.log(firstVariable + secondVariable)</code></li>
-				<li>Build an array that consists of your classmates. Console log the array. If your syntax is wrong, you'll get an error.</li>
-				<li>Build a sandwhich object that has "bread", "filling", and "toasted" keys. Assign values to each key. Console log the object. If your syntax is wrong, you'll get an error.</li>
-			</ol>
-		</section> -->
-	<!-- End week of 4/16/24 -->
 
 
     </main>
